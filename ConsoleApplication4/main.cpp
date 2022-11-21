@@ -10,7 +10,6 @@ namespace data
 	constexpr auto rand_val = ((__COUNTER__ * 0x10000) | 10) / 3;
 	auto secret_key = _rotl64((int)(__TIME__) ^ 3, rand_val);
 	auto seed_key = (int)(__TIMESTAMP__) - secret_key;
-
 	auto dynamic_key = 0;
 
 	auto initializate() -> void
